@@ -1,10 +1,14 @@
 # Laboratorio: Man-in-the-Middle sobre HTTP
 
-Laboratorio **local** para entender, de forma visual, por qué **nunca** se deben
-enviar credenciales por HTTP. Monta un login de demostración de un **banco ficticio**
-(«Banco Nébula», una entidad que no existe) y te enseña cómo un atacante situado «en
-medio» de la conexión captura el usuario, la contraseña y la cookie de sesión **en
-texto plano**.
+**Laboratorio MITM** convierte un inicio de sesión en una práctica de análisis de
+tráfico HTTP. Su escenario, **Banco Nébula**, es una entidad ficticia creada para
+observar cómo viajan las credenciales de demostración y la cookie emitida por la
+aplicación cuando la conexión carece de cifrado.
+
+La práctica combina una aplicación Python, nginx y **mitmproxy como proxy inverso**.
+Los servicios del laboratorio escuchan en `127.0.0.1`; la guía conduce la inspección
+del tráfico y los scripts permiten instalar, verificar y retirar el entorno. Está
+pensado para formación local en equipos propios o laboratorios autorizados.
 
 > ⚠️ **Solo con fines educativos y sobre tu propio equipo.** Interceptar el tráfico de
 > otras personas o de sistemas que no son tuyos es ilegal.
